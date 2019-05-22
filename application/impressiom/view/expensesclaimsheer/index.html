@@ -1,0 +1,85 @@
+<!-- content start -->
+<div class="page-content">
+
+    <div class="container-fluid bgWhite" id="Expensesclaimsheer_index">
+
+        <!-- 选择条件 -->
+        <div  class="row-fluid mgBtm15">
+            <div class="layui-row layui-col-space10">
+                <div class="layui-col-md4">
+                    <label class="layui-form-label">数据来源</label>
+                    <div class="layui-input-block">
+                        <select name="city" lay-verify="required" v-model="paramData.orgId" v-on:change="whereChange()">
+                            <option v-for="org in orgList" :value="org.FORGID">{{org.FName}}</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="layui-col-md4">
+                    <label class="layui-form-label">开始日期</label>
+                    <div class="layui-input-block">
+                        <input type="text" class="layui-input w170 m-wrap boxS-ih m-ctrl-medium" id="Expensesclaimsheer_startDate">
+                    </div>
+                </div>
+
+                <div class="layui-col-md4">
+                    <!--<button type="submit" class="btn search  w87 h34"  v-on:click="searchClick()">检索数据</button>-->
+                    <label class="layui-form-label">结束日期</label>
+                    <div class="layui-input-block">
+                        <input type="text" class="layui-input w170 m-wrap boxS-ih m-ctrl-medium" id="Expensesclaimsheer_stopDate">
+                    </div>
+                </div>
+            </div>
+            <!-- 查询按钮 -->
+            <!--<div class="h34">-->
+
+
+            <div class="clr"></div>
+            <!--</div>-->
+        </div>
+        <div id="search" class="row-fluid mgBtm15">
+            <div class="layui-row layui-col-space10">
+                <div class="layui-col-md4">
+                    <label class="layui-form-label">写入账套</label>
+                    <div class="layui-input-block">
+                        <select name="city" lay-verify="required" v-model="pushParamData.orgId">
+                            <option value="null">指定Wise账套</option>
+                            <option value="100001">英普</option>
+                            <option value="100002">东源</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="layui-col-md4">
+
+                </div>
+
+                <div class="layui-col-md4">
+                    <!--<button type="submit" class="btn search  w87 h34"  v-on:click="searchClick()">检索数据</button>-->
+
+                </div>
+            </div>
+            <!-- 查询按钮 -->
+            <!--<div class="h34">-->
+
+
+            <div class="clr"></div>
+            <!--</div>-->
+        </div>
+
+        <button 	class="layui-btn layui-btn-lg layui-btn-normal" v-on:click="execSync()">同步选择的数据</button>
+
+        <table id="expensesclaimsheer_table" class="layui-table" lay-filter="expensesclaimsheer_table"></table>
+
+        <!-- 分页容器 -->
+        <!--<div id="paging" class="box mgTop30 h30 lh30 fs13"></div>-->
+    </div>
+
+    <!--加载当前页脚本-->
+<script type="application/javascript">
+    loadScript(['/static/AppJs/expensesclaimsheer/index.js']);
+</script>
+</div>
+
+
+<!-- content end -->

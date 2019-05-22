@@ -1,0 +1,88 @@
+<!-- content start -->
+<div class="page-content">
+
+    <div class="container-fluid bgWhite" id="Product_index">
+
+        <!-- 选择条件 -->
+        <div  class="row-fluid mgBtm15">
+            <div class="layui-row layui-col-space10">
+                <div class="layui-col-md4">
+                    <label class="layui-form-label">数据来源</label>
+                    <div class="layui-input-block">
+                        <select name="city" lay-verify="required" v-model="paramData.orgId" v-on:change="whereChange()">
+                            <option v-for="org in orgList" :value="org.FORGID">{{org.FName}}</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="layui-col-md4">
+                    <label class="layui-form-label">排序方式</label>
+                    <div class="layui-input-block">
+                        <select name="city" lay-verify="required" v-model="paramData.orderType" v-on:change="whereChange()">
+                            <option value="DESC">默认( 倒序 取 最近数据 )</option>
+                            <option value="ASC">顺序(从最开始取)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="layui-col-md4">
+                    <!--<button type="submit" class="btn search  w87 h34"  v-on:click="searchClick()">检索数据</button>-->
+                    <label class="layui-form-label">数据条数</label>
+                    <div class="layui-input-block">
+                        <input type="text" class="w134 h34 mgRight20 m-wrap m-ctrl-medium "  v-model="paramData.number" v-on:change="whereChange()"/>
+                    </div>
+                </div>
+            </div>
+            <!-- 查询按钮 -->
+            <!--<div class="h34">-->
+
+
+            <div class="clr"></div>
+            <!--</div>-->
+        </div>
+        <div id="search" class="row-fluid mgBtm15">
+            <div class="layui-row layui-col-space10">
+                <div class="layui-col-md4">
+                    <label class="layui-form-label">写入账套</label>
+                    <div class="layui-input-block">
+                        <select name="city" lay-verify="required" v-model="pushParamData.orgId">
+                            <option value="null">指定Wise账套</option>
+                            <option value="100001">英普</option>
+                            <option value="100002">东源</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="layui-col-md4">
+
+                </div>
+
+                <div class="layui-col-md4">
+                    <!--<button type="submit" class="btn search  w87 h34"  v-on:click="searchClick()">检索数据</button>-->
+
+                </div>
+            </div>
+            <!-- 查询按钮 -->
+            <!--<div class="h34">-->
+
+
+            <div class="clr"></div>
+            <!--</div>-->
+        </div>
+
+        <button 	class="layui-btn layui-btn-lg layui-btn-normal" v-on:click="execSync()">同步选择的数据</button>
+
+        <table id="product_table" class="layui-table" lay-filter="product_table"></table>
+
+        <!-- 分页容器 -->
+        <!--<div id="paging" class="box mgTop30 h30 lh30 fs13"></div>-->
+    </div>
+
+    <!--加载当前页脚本-->
+<script type="application/javascript">
+    loadScript(['/static/AppJs/product/index.js']);
+</script>
+</div>
+
+
+<!-- content end -->

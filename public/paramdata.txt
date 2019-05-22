@@ -1,0 +1,43 @@
+
+
+[ 2019-03-27 08:33:01 ]
+PATH = C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd
+SYSTEMROOT = C:\Windows
+COMSPEC = C:\Windows\system32\cmd.exe
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+WINDIR = C:\Windows
+PHP_FCGI_MAX_REQUESTS = 1000
+PHPRC = D:/phpStudy/PHPTutorial/php/php-7.2.1-nts/
+_FCGI_SHUTDOWN_EVENT_ = 1848
+SCRIPT_NAME = /index.php
+REQUEST_URI = /index.php?s=index/index/hello
+QUERY_STRING = s=index/index/hello
+REQUEST_METHOD = GET
+SERVER_PROTOCOL = HTTP/1.1
+GATEWAY_INTERFACE = CGI/1.1
+REMOTE_PORT = 1682
+SCRIPT_FILENAME = C:/Users/Administrator/Desktop/tp5/public/index.php
+SERVER_ADMIN = admin@php.cn
+CONTEXT_DOCUMENT_ROOT = C:/Users/Administrator/Desktop/tp5/public
+CONTEXT_PREFIX = 
+REQUEST_SCHEME = http
+DOCUMENT_ROOT = C:/Users/Administrator/Desktop/tp5/public
+REMOTE_ADDR = 192.168.0.106
+SERVER_PORT = 81
+SERVER_ADDR = 192.168.0.115
+SERVER_NAME = 192.168.0.115
+SERVER_SOFTWARE = Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9
+SERVER_SIGNATURE = 
+SystemRoot = C:\Windows
+HTTP_ACCEPT_LANGUAGE = zh-CN,zh;q=0.9
+HTTP_ACCEPT_ENCODING = gzip, deflate
+HTTP_ACCEPT = text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+HTTP_USER_AGENT = Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36
+HTTP_UPGRADE_INSECURE_REQUESTS = 1
+HTTP_CACHE_CONTROL = max-age=0
+HTTP_CONNECTION = close
+HTTP_HOST = 192.168.0.115:81
+FCGI_ROLE = RESPONDER
+PHP_SELF = /index.php
+REQUEST_TIME_FLOAT = 1553675581.9029
+REQUEST_TIME = 1553675581
